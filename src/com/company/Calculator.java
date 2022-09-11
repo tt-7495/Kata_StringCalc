@@ -5,10 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Calculator {
-    public static void stringCalculator() throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    public static String stringCalculator(String s) throws IOException {
         StringBuilder builder = new StringBuilder();
-        String s = reader.readLine();
         if (s.contains("+")) {
             String[] numbers = s.split("\""+"\\+"+"\"");
             builder.append(numbers[0]).append(numbers[1]);
@@ -79,6 +77,6 @@ public class Calculator {
             }
 
         }
-
+return builder.toString();
     }
 }
